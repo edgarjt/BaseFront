@@ -22,3 +22,17 @@
 .active {
   background: #f3f3f3;
 }
+.title-menu {
+  border-bottom: #eaeaea 1px solid;
+}
+.nameAvatar {
+  font-size: 14px;
+  padding-left: 7px;
+  font-weight: normal;
+}
+.nameTitle {
+  padding-left: 7px;
+}
+.logo {
+  width: 35px;
+}
