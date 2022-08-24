@@ -33,11 +33,12 @@ export class NavigationComponent implements OnInit{
 
   ngOnInit(): void {
     this.loadMenu();
+    console.log('navigation active')
   }
 
   loadMenu(): void {
     this.menu = [
-      { routeLink: 'link', title: 'Dashboard' },
+      { routeLink: '/dummy', title: 'Dummy' },
       { routeLink: 'link', title: 'Components' },
       { routeLink: 'link', title: 'Forms' },
       { routeLink: 'link', title: 'Table' }

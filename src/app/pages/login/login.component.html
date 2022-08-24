@@ -1,0 +1,44 @@
+<div class="container-fluid vh-100 flex-container">
+  <mat-card class="card justify-login">
+
+    <div class="text-center">
+      <img src="https://material.angular.io/assets/img/homepage/angular-logo.svg" alt="Logo" width="250">
+      <mat-card-title>Login</mat-card-title>
+    </div>
+    <div>
+      <mat-card-content class="">
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <mat-form-field class="w-100">
+            <mat-label>Correo electronico</mat-label>
+
+            <input type="email" formControlName="email" matInput
+                   [ngClass]="{ 'is-invalid': submitted && form.email.errors }">
+
+            <mat-error *ngIf="submitted && form.email.errors">
+              <div *ngIf="loginForm.controls.email.errors">Correo electronico inválido</div>
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="w-100">
+            <mat-label>Contraseña</mat-label>
+            <input type="password" formControlName="password" matInput [type]="hide ? 'password' : 'text'"
+                   [ngClass]="{ 'is-invalid': submitted && form.password.errors }">
+
+            <mat-icon matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              {{hide ? 'visibility_off' : 'visibility'}}
+            </mat-icon>
+
+            <mat-error *ngIf="submitted && form.password.errors">
+              <div *ngIf="loginForm.controls.password.errors">Contraseña inválido</div>
+            </mat-error>
+          </mat-form-field>
+
+          <button mat-raised-button color="primary" [disabled]="disableButton">Iniciar</button>
+        </form>
+      </mat-card-content>
+      <div class="cont-forgot">
+        <a href="#" class="forgot-password">Olvidé mi contraseña</a>
+      </div>
+    </div>
+  </mat-card>
+</div>

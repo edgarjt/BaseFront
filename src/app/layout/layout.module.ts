@@ -6,11 +6,13 @@ import { MaterialModule } from '../material.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { AvatarModule } from 'ngx-avatar';
+import { NotFountComponent } from './not-fount/not-fount.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
-    NavigationComponent
+    NavigationComponent,
+    NotFountComponent
   ],
   exports: [
     NavigationComponent,
